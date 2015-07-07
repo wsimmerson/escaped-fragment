@@ -1,5 +1,5 @@
 {
-  "name": "mean-seo",
+  "name": "escaped-fragment",
   "url": "https://github.com/wsimmerson/escaped-fragment",
   "version": "0.0.8",
   "keywords": [
@@ -8,8 +8,12 @@
     "webkit",
     "mean",
     "meanjs",
-    "seo"
+    "escaped-fragment"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wsimmerson/escaped-fragment.git"
+  },
   "author": {
     "name": "Wayne Simmerson, Roie Cohen and Amos Haviv",
     "email": "wsimmerson@gmail.com"
