@@ -1,6 +1,6 @@
 {
   "name": "mean-seo",
-  "url": "https://github.com/meanjs/mean-seo",
+  "url": "https://github.com/wsimmerson/escaped-fragment",
   "version": "0.0.8",
   "keywords": [
     "phantomjs",
@@ -11,14 +11,15 @@
     "seo"
   ],
   "author": {
-    "name": "Roie Cohen and Amos Haviv",
-    "email": "roie.cohen@gmail.com"
+    "name": "Wayne Simmerson, Roie Cohen and Amos Haviv",
+    "email": "wsimmerson@gmail.com"
   },
   "dependencies": {
     "lodash": "~2.4.x",
-    "redis": "~0.10.x",
+    "mean-seo": "git://github.com/wsimmerson/escaped-fragment.git",
+    "mkdirp": "~0.3.x",
     "phantomjs": "~1.9.x",
-    "mkdirp": "~0.3.x"
+    "redis": "~0.10.x"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require should --reporter spec"

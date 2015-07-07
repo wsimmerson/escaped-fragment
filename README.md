@@ -1,29 +1,30 @@
-# MEAN-SEO
-SEO Solution for MEAN.JS applications which forwards crawlers requests to a compiled HTML copy using PhantomJS.
+# ESCAPED-FRAGMENT
+EXPRESS Middleware for JavaScript front end based sites. Forwards crawlers requests to a compiled HTML copy using PhantomJS.
+FORKED FROM MEAN_SEO - WHY FORK?  The escaped fragment format created by Google is not specific to the MEAN Stack, or MEAN.JS specifically.  This makes more sense as generic Express.js Middleware.
 
 ## Longer Version
-If you ever tried to make your AngularJS application crawler friendly, you already know this is a bit of a headache. Part of evolving the MEAN.JS stack towards production ready state, the MEAN-SEO module makes it pretty simple to make sure your MEAN application is ready for crawlers requests.
+If you ever tried to make your AngularJS application crawler friendly, you already know this is a bit of a headache.
 
-When a crawler requests the page using the [**\_escaped\_fragment\_**](https://developers.google.com/webmasters/ajax-crawling/docs/specification), the module launches the PhantomJS headless-browser, which creates a copy of the page and stores it in cache for future requests. 
+When a crawler requests the page using the [**\_escaped\_fragment\_**](https://developers.google.com/webmasters/ajax-crawling/docs/specification), the module launches the PhantomJS headless-browser, which creates a copy of the page and stores it in cache for future requests.
 
 ## Quick Install
-First you'll need to install the MEAN-SEO module using npm:
+First you'll need to install the ESCAPED-FRAGMENT module using npm:
 
-	npm install mean-seo --save
+	npm install --save git+https://git@github.com/wsimmerson/escaped-fragment.git
 
-Then include in you express application: 
+Then include in you express application:
 
-	var seo = require('mean-seo');
+	var escapedFragment = require('escaped-fragment');
 
 And finally, just before you require the **app.router** middleware add the following:
-	
-	app.use(seo({
+
+	app.use(escapedFragment({
 		cacheClient: 'disk', // Can be 'disk' or 'redis'
     	redisURL: 'redis://:password@hostname:port', // If using redis, optionally specify server credentials
 		cacheDuration: 2 * 60 * 60 * 24 * 1000, // In milliseconds for disk cache
 	}));
-	
-	// app.use(app.router) will be below this line 
+
+	// app.use(app.router) will be below this line
 
 If you use HTML5 URL scheme then you should let the crawler know you're serving an AJAX application by adding the following to the HEAD tag of your page:
 

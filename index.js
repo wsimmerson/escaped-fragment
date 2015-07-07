@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/mean-seo');
+module.exports = require('./lib/escaped-fragment');
